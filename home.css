@@ -8,6 +8,10 @@
     src: url('trajan.ttf'); /*URL to font*/
 }
 
+.container{
+  width: 100%;
+}
+
 #header{
   position: absolute;
   z-index: 10;
@@ -44,12 +48,20 @@
   border-bottom-color: #ffff;
 }
 
+.hr-light{
+  background-color: #fff;
+  width: 500px;
+  margin: 0 auto;
+  align-self: center;
+}
+
 
 
 .main{
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("akomea.png");
   min-height: 120vh;
+  width: 100%;
   background-size: cover;
   background-position: center;
   padding: 220px 0 200px;
@@ -82,10 +94,7 @@
   animation-duration: 2s;
 }
 
-
-
-
-@@media (max-width: 768px){
+@media (max-width: 768px){
   .main{
     padding: 200px 0;
   }
@@ -139,21 +148,60 @@
   text-align: center;
 }
 
-.features{
+#features{
   margin-top: 2em;
-  width: auto;
-  height: 1000px;
-  background-color: #cfd2d4
+  width: 100%;
+  height: 1050px;
+  background-color: #f7f7f7
 }
 
-.rectangle{
-  width:180px;
-  height:5px;
-  background-color:  #cfd2d4
-  box-shadow: 5px 10px;
+.row{
+
 }
+/*
+#row2{
+  margin-top: 100px;
+}
+
+#row3{
+  margin-top: 110px;
+} */
 
 .portfolio{
+  margin-top: 15px;
   text-align: center;
   text-shadow: 1px 1px;
+}
+
+.gallery {
+-webkit-column-count: 3;
+-moz-column-count: 3;
+column-count: 3;
+-webkit-column-width: 33%;
+-moz-column-width: 33%;
+column-width: 33%; }
+.gallery .pics {
+-webkit-transition: all 350ms ease;
+transition: all 350ms ease; }
+.gallery .animation {
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1); }
+
+@media (max-width: 450px) {
+.gallery {
+-webkit-column-count: 1;
+-moz-column-count: 1;
+column-count: 1;
+-webkit-column-width: 100%;
+-moz-column-width: 100%;
+column-width: 100%;
+}
+}
+
+@media (max-width: 400px) {
+.btn.filter {
+padding-left: 1.1rem;
+padding-right: 1.1rem;
+}
 }
