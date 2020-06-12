@@ -27,10 +27,12 @@
   margin-right: rgb(255, 0, 0);
   width: 1%;
   height: auto;
+
 }
 
 .navbar-dark .navbar-brand{
   color: #dcdde1;
+
 }
 
 .nav-item{
@@ -65,6 +67,7 @@
   background-size: cover;
   background-position: center;
   padding: 220px 0 200px;
+
 }
 
 .main h2{
@@ -160,22 +163,14 @@
   background-color: #f7f7f7
 }
 
-.row{
-
-}
-/*
-#row2{
-  margin-top: 100px;
-}
-
-#row3{
-  margin-top: 110px;
-} */
 
 .portfolio{
   margin-top: 15px;
   text-align: center;
-  text-shadow: 1px 1px;
+}
+
+#contact{
+  text-align: center;
 }
 
 .gallery {
