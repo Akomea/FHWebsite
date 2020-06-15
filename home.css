@@ -17,8 +17,7 @@
 } 
 
 .container{
-  width: 100%;
-  
+  width: 100%;  
 }
 
 #header{
@@ -37,12 +36,10 @@
   margin-right: rgb(255, 0, 0);
   width: 1%;
   height: auto;
-
 }
 
 .navbar-dark .navbar-brand{
   color: #dcdde1;
-
 }
 
 .nav-item{
@@ -75,7 +72,7 @@
   background-size: cover;
   background-position: center;
   padding: 220px 0 200px;
-  
+
 }
 
 .main h2{
@@ -109,6 +106,10 @@
   .main{
     padding: 200px 0;
   }
+}
+
+#location{
+  margin-top: 2vw;
 }
 
 #rain{
