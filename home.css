@@ -107,9 +107,13 @@
     padding: 200px 0;
   }
 }
+#contactcenter{
+  width: 100px;
+}
 
 #location{
-  margin-top: 2vw;
+  margin-top: 3vw;
+  margin-left: 1vw;
 }
 
 #rain{
