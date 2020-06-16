@@ -181,7 +181,6 @@
   margin: 0px;
 }
 
-
 .portfolio{
   margin-top: 15px;
   text-align: center;
@@ -189,6 +188,10 @@
 
 #contact{
   text-align: center;
+}
+
+#contactcenter{
+  width: 500vw;
 }
 
 .gallery {
@@ -205,6 +208,11 @@ transition: all 350ms ease; }
 -webkit-transform: scale(1);
 -ms-transform: scale(1);
 transform: scale(1); }
+
+.page-footer{
+  background-color: #575b63;
+}
+
 
 @media (max-width: 450px) {
 .gallery {
