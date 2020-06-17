@@ -59,7 +59,7 @@
 
 .hr-light{
   background-color: #fff;
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   align-self: center;
 }
@@ -107,9 +107,18 @@
     padding: 200px 0;
   }
 }
+
+/* #cus{
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+} */
+
 #contactcenter{
-  width: 100px;
+  width: 110px;
 }
+
 
 #location{
   margin-top: 3vw;
