@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'trajan'; /*a name to be used later*/
-    src: url('trajan.ttf'); /*URL to font*/
+    src: url('css/trajan.ttf'); /*URL to font*/
 }
 
 .bg-dark{
@@ -15,10 +15,6 @@
 .bg-dark.scrolled { background-color: rgba(0,0,0,0.90) !important; -webkit-transition: background-color 500ms linear; -moz-transition: background-color 500ms 
   linear; -ms-transition: background-color 500ms linear; transition: background-color 500ms linear;
 } 
-
-.container{
-  width: 100%;  
-}
 
 #header{
   position: absolute;
@@ -66,7 +62,7 @@
 
 .main{
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("akomea.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/akomea.png");
   min-height: 120vh;
   width: 100%;
   background-size: cover;
@@ -108,12 +104,6 @@
   }
 }
 
-/* #cus{
-  margin: auto;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-} */
 
 #contactcenter{
   width: 110px;
@@ -169,6 +159,10 @@
 
 .p-5{
   padding: 0%;
+}
+
+.resize{
+  text-align: left;
 }
 
 
