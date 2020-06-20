@@ -12,7 +12,7 @@
   background: transparent !important;
 }
 
-.bg-dark.scrolled { background-color: rgba(0,0,0,0.90) !important; -webkit-transition: background-color 500ms linear; -moz-transition: background-color 500ms 
+.bg-dark.scrolled { background-color: rgba(0,0,0,0.60) !important; -webkit-transition: background-color 500ms linear; -moz-transition: background-color 500ms 
   linear; -ms-transition: background-color 500ms linear; transition: background-color 500ms linear;
 } 
 
@@ -26,6 +26,10 @@
   position:fixed;
   max-width: max-content;
   min-width: 100%;
+  -webkit-box-shadow: 0 1px 6px -6px #999;
+    -moz-box-shadow: 0 1px 6px -6px #999;
+    box-shadow: 0 5px 7px -6px #4a4949;
+  
 }
 
 .navbar-brand{
@@ -62,13 +66,24 @@
 
 .main{
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("images/akomea.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/akomea.png");
   min-height: 120vh;
   width: 100%;
+  object-fit: cover;
   background-size: cover;
+  object-position: bottom;
   background-position: center;
   padding: 220px 0 200px;
 
+}
+
+@media (max-width: 768px) {
+  .main{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/melonirri.jpeg") no-repeat;
+    object-fit: cover;
+    background-size: cover;
+  }
+  
 }
 
 .main h2{
@@ -212,8 +227,23 @@ transition: all 350ms ease; }
 -ms-transform: scale(1);
 transform: scale(1); }
 
+
+#footend{
+  background-color: #0000;
+}
+
+#usefullinks{
+  color: #fff;
+}
+
 .page-footer{
-  background-color: #575b63;
+  background-color: #737373;
+}
+
+.connectshadow{
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 8px -6px #4a4949;
 }
 
 
