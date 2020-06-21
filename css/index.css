@@ -77,7 +77,7 @@
 
 }
 
-@media all and (orientation:portrait) {
+@media (orientation:portrait) {
   .main{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
     object-fit: cover;
@@ -85,7 +85,7 @@
   }
 }
 
-@media all and (orientation:portrait) {
+@media (pointer:coarse) {
   .main{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
     object-fit: cover;
@@ -93,7 +93,16 @@
   }
 }
 
-@media (hover:none), (hover:on-demand){
+@media (hover:none){
+  .main{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
+    object-fit: cover;
+    background-size: cover;
+  }
+}
+
+
+@media (max-width:768px){
   .main{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
     object-fit: cover;
