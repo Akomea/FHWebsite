@@ -77,13 +77,28 @@
 
 }
 
-@media (max-width: 768px) {
+@media all and (orientation:portrait) {
   .main{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/melonirri.jpeg") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
     object-fit: cover;
     background-size: cover;
   }
-  
+}
+
+@media all and (orientation:portrait) {
+  .main{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
+    object-fit: cover;
+    background-size: cover;
+  }
+}
+
+@media (hover:none), (hover:on-demand){
+  .main{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
+    object-fit: cover;
+    background-size: cover;
+  }
 }
 
 .main h2{
@@ -197,6 +212,15 @@
 
 .row{
   margin: 0px;
+}
+
+.filter:hover{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.btn-default{
+  background-color: whitesmoke !important;
 }
 
 .portfolio{
