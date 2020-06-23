@@ -66,7 +66,7 @@
 
 .main{
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/akomea.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/drip.jpg");
   min-height: 120vh;
   width: 100%;
   object-fit: cover;
@@ -75,39 +75,6 @@
   background-position: center;
   padding: 220px 0 200px;
 
-}
-
-@media (orientation:portrait) {
-  .main{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
-    object-fit: cover;
-    background-size: cover;
-  }
-}
-
-@media (pointer:coarse) {
-  .main{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
-    object-fit: cover;
-    background-size: cover;
-  }
-}
-
-@media (hover:none){
-  .main{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
-    object-fit: cover;
-    background-size: cover;
-  }
-}
-
-
-@media (max-width:768px){
-  .main{
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../images/melonirri.jpeg") no-repeat;
-    object-fit: cover;
-    background-size: cover;
-  }
 }
 
 .main h2{
