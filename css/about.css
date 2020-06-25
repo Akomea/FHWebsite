@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  @font-face {
+      font-family: 'trajan'; /*a name to be used later*/
+      src: url('css/trajan.ttf'); /*URL to font*/
+  }
+  
+  #header{
+    position: absolute;
+    z-index: 10;
+  }
+
+  .bg-dark{
+    background: transparent !important;
+  }
+  
+  .bg-dark.scrolled { background-color: rgba(0,0,0,0.60) !important; -webkit-transition: background-color 500ms linear; -moz-transition: background-color 500ms 
+    linear; -ms-transition: background-color 500ms linear; transition: background-color 500ms linear;
+  } 
+  
+  .navbar{
+    padding: 1px 0;
+    position:fixed;
+    max-width: max-content;
+    min-width: 100%;
+    -webkit-box-shadow: 0 1px 6px -6px #999;
+      -moz-box-shadow: 0 1px 6px -6px #999;
+      box-shadow: 0 5px 7px -6px #4a4949;
+    
+  }
+  
+  .navbar-brand{
+    margin-right: rgb(255, 0, 0);
+    width: 1%;
+    height: auto;
+  }
+  
+  .navbar-dark .navbar-brand{
+    color: #dcdde1;
+  }
+  
+  .nav-item{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 10px;
+  }
+  
+  .navbar-dark .navbar-nav .nav-item .nav-link:hover{
+    color: #262626;
+  }
+  
+  .navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #trulycare{
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../images/liana.png");
+    min-height: 70vh;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  #careText{
+    color: ivory;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50%;
+  }
+  
+ 
+  
+  .main h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.6em;
+    color:#dcdde1;
+  }
+  
+  /* The element to apply the animation to */
+  .btn {
+    background: #718093;
+    color: #fff;
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    background-color: #718093;
+    animation-name: example;
+    animation-duration: 2s;
+  }
+  
+  @media (max-width: 768px){
+    .main{
+      padding: 200px 0;
+    }
+  }
+
+
+
+  .btn-outline-quote{
+    animation-name: none;
+  
+  }
+  
+  .btn-outline-black{
+    animation-name: none;
+  }
+  
+
+ 
+  
+  .filter:hover{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  .btn-default{
+    background-color: whitesmoke !important;
+  }
+  
+
+  
+  .gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%; }
+  .gallery .pics {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease; }
+  .gallery .animation {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+  
+  
+  #footend{
+    background-color: #0000;
+  }
+  
+  #usefullinks{
+    color: #fff;
+  }
+  
+  .page-footer{
+    background-color: #737373;
+  }
+  
+  .connectshadow{
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+      -moz-box-shadow: 0 8px 6px -6px #999;
+      box-shadow: 0 8px 8px -6px #4a4949;
+  }
+
+  .w-100 {
+    width: 100% !important;
+    height: 80vh;
+  }
+  
+  
+  @media (max-width: 450px) {
+  .gallery {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+  }
+  }
+  
+  @media (max-width: 400px) {
+  .btn.filter {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  }
+  }
