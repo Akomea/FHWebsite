@@ -38,7 +38,7 @@ ul.filters > li.active > a{
     border-radius: 0;
     border: 1px solid #eee;
     background-color: #fff;
-    box-shadow: 1px 1px 1.5px rgba(0,0,0,0.075);
+    box-shadow: 1px 1px 1.5px rgba(0,0,0,0.090);
 }
 
 .card-head{
