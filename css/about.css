@@ -22,7 +22,7 @@
   } 
   
   .navbar{
-    padding: 1px 0;
+    padding: 0px 0;
     position:fixed;
     max-width: max-content;
     min-width: 100%;
@@ -73,15 +73,14 @@
     text-align: center;
     margin-top: 50%;
   }
+
+  #teamwork{
+  
+  padding: 5%;
+  }
   
  
-  
-  .main h2{
-    margin: 0;
-    padding: 0;
-    font-size: 2.6em;
-    color:#dcdde1;
-  }
+
   
   /* The element to apply the animation to */
   .btn {
@@ -96,11 +95,18 @@
     animation-duration: 2s;
   }
   
-  @media (max-width: 768px){
-    .main{
-      padding: 200px 0;
-    }
-  }
+  img {
+    width:100%;
+    height:auto;
+}
+
+#hp_imgs img {
+	float:left;
+	margin:2px;
+	border-radius:4px;
+	display: block;
+	max-width:100%;
+}
 
 
 

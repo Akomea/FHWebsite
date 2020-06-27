@@ -5,7 +5,17 @@
 
 @font-face {
     font-family: 'trajan'; /*a name to be used later*/
-    src: url('css/trajan.ttf'); /*URL to font*/
+    src: url('/css/trajn.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'bebas'; /*a name to be used later*/
+  src: url('../css/BebasNeue-Bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'mont'; /*a name to be used later*/
+  src: url('../css/Montserrat-ExtraBold.otf'); /*URL to font*/
 }
 
 .bg-dark{
@@ -121,7 +131,8 @@
   margin-left: 1vw;
 }
 
-#rain{
+.rain{
+  font-family: trajan !important ;
   font-weight: bolder;
   font-style: bold;
   font-size: 4.5em;
