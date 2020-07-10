@@ -76,7 +76,7 @@
 .main{
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/drip.jpg");
-  min-height: 120vh;
+  max-height: 100%;
   width: 100%;
   object-fit: cover;
   background-size: cover;
