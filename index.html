@@ -148,11 +148,11 @@
     <div class="row">
 
       <!-- Grid column -->
-      <div class="col-md-12 d-flex justify-content-center mb-5">
+      <!-- <div class="col-md-12 d-flex justify-content-center mb-5">
         <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
         <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="1">Installations</button>
         <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Farms</button>
-      </div>
+      </div> -->
 
     </div>
     <!-- Grid column -->
@@ -164,44 +164,83 @@
 
     <!-- Grid column -->
     <div class="mb-3 pics animation all 2">
-      <img class="img-fluid" src="images/melonirri.jpeg"
-        alt="Card image cap">
+      <img class="img-fluid" src="images/melonirri.jpeg" alt="Card image cap" onclick="openModal();currentSlide(1)" class="hover-shadow">
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
     <div class="mb-3 pics animation all 1">
-      <img class="img-fluid" src="images/fieldirrigation.png" alt="Card image cap">
+      <img class="img-fluid" src="images/fieldirrigation.png" alt="Card image cap" onclick="openModal();currentSlide(2)" class="hover-shadow">
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
     <div class="mb-3 pics animation all 1">
-      <img class="img-fluid" src="images/watermelon.png" alt="Card image cap">
+      <img class="img-fluid" src="images/watermelon.png" alt="Card image cap" onclick="openModal();currentSlide(3)" class="hover-shadow">
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
     <div class="mb-3 pics animation all 2">
       <img class="img-fluid" src="images/tubes.png"
-        alt="Card image cap">
+        alt="Card image cap" onclick="openModal();currentSlide(4)" class="hover-shadow">
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
     <div class="mb-3 pics animation all 2">
       <img class="img-fluid" src="images/maize tubes.png"
-        alt="Card image cap">
+        alt="Card image cap" onclick="openModal();currentSlide(5)" class="hover-shadow">
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
     <div class="mb-3 pics animation all 1">
-      <img class="img-fluid" src="images/irricover.jpeg" alt="Card image cap">
+      <img class="img-fluid" src="images/irricover.jpeg" alt="Card image cap" onclick="openModal();currentSlide(6)" class="hover-shadow">
     </div>
     <!-- Grid column -->
 
   </div>
+
+  <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/melonirri.jpeg" style="width: 100% !important;
+      height: 80vh;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/fieldirrigation.png" style="width: 100% !important;
+      height: 80vh;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/watermelon.png" style="width: 100% !important;
+      height: 80vh;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/tubes.png" style="width: 100% !important;
+      height: 80vh; ">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    
+  </div>
+</div>
+
+
+
   <!-- Grid row -->
   <div id="contact" class="contactUs">
     <!-- Heading -->
@@ -249,7 +288,7 @@
           <div class="text-center mt-4">
             <button type="button" name="submit" class="btn btn-outline-primary" >Send Mail</button>
           </div>
-          
+
         </form>
         <!-- Form contact -->
       </div>
@@ -426,5 +465,50 @@
     $('nav').toggleClass('scrolled', $(this).scrollTop() > 150);
   });
 </script>
+
+
+<script>
+  // Open the Modal
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  // Close the Modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+  
 
 </html>
