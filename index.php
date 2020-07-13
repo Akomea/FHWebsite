@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<?php
+
+    $message_sent = false;
+    if(isset($_POST['email'])&&['email'] != ''){
+
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+
+            //submit form
+            $userName = $_POST['name'];
+            $userEmail = $_POST['email'];
+            $messageSubject = $_POST['subject'];
+            $message = $_POST['message'];
+
+            $to = "kennakomea@famous-house.com";
+            $body = "";
+
+            $body .= "From: ".$userName. "\r\n";
+            $body .= "Email: ".$userEmail. "\r\n";
+            $body .= "Message: ".$message. "\r\n";
+
+            mail($to,$messageSubject,$body);
+
+            $message_sent = true;
+        }
+        else{
+          $invalid_class_name = "form-invalid";
+        }
+
+    }
+
+?>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="js/index.js"></script>
+
+  <meta charset="utf-8" name="description" content="The only farm and lawn irrigation system in Ghana that is effective yet affordable. 
+  We supply our products across all regions in Ghana and provide installation services for your agricultural projects, garden or lawn works">
+  <title>Famous House Enterprise</title>
+</head>
+
+<body>
+<?php
+    if($message_sent):
+    ?>
+        <div class="alert alert-success">
+        <strong>Success!</strong> Thanks, we will be in touch
+        </div>
+
+    <?php
+    else:
+    ?>
+
+  <section id="header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+
+        <div class="container">
+          <a href="index.php" class="navbar-brand"> <img src="images/logo.png" alt=""> </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id=navbarSupportedContent>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a href="index.php" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="products.html" class="nav-link">Products</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </section>
+
+  <section class="main">
+    <section class="greetings">
+      <div class="col-sm-12">
+        <h1 class="rain">No Rain? No Problem</h1>
+        <!-- Divider -->
+        <hr class="hr-light">
+        <p id="subtext">At Famous House Irrigation
+          <br>We meet all your irrigation equipment
+          supply and installation needs</p>
+        <a href="about.html" class="btn btn-outline-quote" type="button" id="learnButton">Learn more</a>
+    </section>
+    </div>
+  </section>
+
+
+  <div class="intro">
+    <h1 id="introHead">A Cost and Water Efficient Irrigation System</h1>
+    <p id="introSubText">In order to maximize profit and reduce frustration for farmers, gardeners and project managers
+      <br>Our main goal is to provide a durable, affordable and water efficient suit of products
+      <br>and services</p>
+
+    <a href="#contact" class="btn btn-outline-quote" type="requestQuote">Request A Quote</a>
+    <a href="#port" class="btn btn-outline-portfolio" type="seePortforlio">See Our Portforlio</a>
+  </div>
+
+  
+
+  <div class="container-fluid" id="features">
+    <div class="features">
+      <div class="row" id="row1">
+        <div class="col-sm-4" align="center"><img src="images/water.png">
+          <p>
+          <h2>WATER-SAVING</h2>
+          <p>Water-saving equipment of spray irrigation
+            that only requires low operation pressure (0.5-0.7kg/ cm3)
+            to reach spray width range 4M-6M and spray height about: 170cm</p>
+          </p>
+        </div>
+
+        <div class="col-sm-4" align="center"><img src="images/spray.png">
+          <p>
+          <h2>FOGGY-TYPE SPRAY</h2>
+          <p>This spray tube gives off foggy type of water spray
+            without void space to plants, serving
+            as an efficient irrigation purpose. We dare say our system will ensure rain at your command.
+          </p>
+        </div>
+
+        <div class="col-sm-4" align="center"><img src="images/inject.png">
+          <p>
+          <h2>FERTILIZER INJECTION</h2>
+          <p>It can be injected with chemical fertilizer
+            to further nurture the cultivation of plants.</p>
+          </p>
+        </div>
+      </div>
+
+      <div class="row" id="row2">
+        <div class="col-sm-4" align="center"><img src="images/time.png">
+          <p>
+          <h2>TIME-SAVING</h2>
+          <p>Arranged row by row, this spray tube helps
+            to shorten time of irrigation and save the consumption of water.</p>
+          </p>
+        </div>
+
+        <div class="col-sm-4" align="center"><img src="images/money.png">
+          <p>
+          <h2>LOW COST</h2>
+          <p>Our products currently stand as the most cost effective solution without trading off quality results 
+            and durability. With a life span of 5 years, your projects will only need extensions</p>
+          </p>
+        </div>
+
+        <div class="col-sm-4" align="center"><img src="images/good.png">
+          <p>
+          <h2>GOOD QUALITY</h2>
+          <p>Our products are directly manufactured by Shuen Yue giving total control on quality assurance </p>
+          </p>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+
+  </div>
+  <div id="port" class="portfolio">
+    <h2>Portfolio</h2>
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <!-- <div class="col-md-12 d-flex justify-content-center mb-5">
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="1">Installations</button>
+        <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="2">Farms</button>
+      </div> -->
+
+    </div>
+    <!-- Grid column -->
+  </div>
+  <!-- Grid row -->
+
+  <!-- Grid row -->
+  <div class="gallery" id="gallery">
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 2">
+      <img class="img-fluid" src="images/melonirri.jpeg" alt="Card image cap" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 1">
+      <img class="img-fluid" src="images/fieldirrigation.png" alt="Card image cap" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 1">
+      <img class="img-fluid" src="images/watermelon.png" alt="Card image cap" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 2">
+      <img class="img-fluid" src="images/tubes.png"
+        alt="Card image cap" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 2">
+      <img class="img-fluid" src="images/maize tubes.png"
+        alt="Card image cap" onclick="openModal();currentSlide(5)" class="hover-shadow">
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="mb-3 pics animation all 1">
+      <img class="img-fluid" src="images/irricover.jpeg" alt="Card image cap" onclick="openModal();currentSlide(6)" class="hover-shadow">
+    </div>
+    <!-- Grid column -->
+
+  </div>
+
+  <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/melonirri.jpeg" style="width: 100% !important;
+      height: 80vh;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/fieldirrigation.png" style="width: 100% !important;
+      height: 80vh;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/watermelon.png" style="width: 100% !important;
+      height: 80vh;">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/tubes.png" style="width: 100% !important;
+      height: 80vh; ">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    
+  </div>
+</div>
+
+
+
+  <!-- Grid row -->
+  <div id="contact" class="contactUs">
+    <!-- Heading -->
+    <h2 id="contact" style="margin-top: 20px;">Contact Us</h2>
+
+    <!-- Divider -->
+    <hr class="hr-light">
+
+  </div>
+
+  <div class="container-fluid">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <iframe id="location" class="col-lg-5 col-sm-12 col-md-12 col-xs-12"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.317012222716!2d-0.25402588526331515!3d5.667218995892072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9f48fea78119%3A0xcb0252da7594a285!2sFamous%20House%20Enterprise!5e0!3m2!1sen!2sgh!4v1592213335166!5m2!1sen!2sgh"
+        height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+      <!--Grid column-->
+      <div id="contactcenter" class="col-lg-6 col-sm-12 col-md-12 col-xs-12">
+        <!-- Form contact -->
+        <form class="p-5 grey-text" action="index.php" method="POST">
+
+          <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
+            <label for="form3">Name</label>
+            <input type="text" id="form3" name="name" placeholder="Your name" class="form-control" tabindex="1" required>
+          </div>
+
+          <div class="md-form form-sm"> <i class="fa fa-envelope prefix"></i>
+            <label for="form2">E-mail </label>
+            <input type="email" id="form2" name="email" placeholder="Your e-mail" class="form-control <?=$invalid_class_name ??""?>" tabindex="2" required>
+          </div>
+
+          <div class="md-form form-sm"> <i class="fa fa-tag prefix"></i>
+            <label for="form34">Subject</label>
+            <input type="text" id="form32" name="subject" placeholder="Subject" class="form-control" tabindex="3" required>
+          </div>
+
+          <div class="md-form form-sm"> <i class="fa fa-pencil prefix"></i>
+            <label for="form8">Message</label>
+            <textarea type="text" id="form8" name="message" placeholder="Your Message here" class="md-textarea form-control" rows="4" tabindex="4" required></textarea>
+          </div>
+
+          <div class="text-center mt-4">
+            <button type="submit" name="submit" class="btn btn-outline-primary" >Send Mail</button>
+          </div>
+
+        </form>
+        <!-- Form contact -->
+      </div>
+      <!--Grid column-->
+    </div>
+
+  </div>
+
+  <!-- Grid row -->
+  <div class="customers">
+    <h2 id="contact">Our Customers</h2>
+  </div>
+
+  <!-- Divider -->
+  <hr style="width: 100%;" class="hr-light">
+
+  <img src="images/allcus.PNG" class="img-fluid" alt="Responsive image">
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small unique-color-dark">
+
+    <div id="connectshadow" style="background-color: #666666;">
+      <div class="container">
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          
+            <!--Youtube-->
+            <a class="ins-ic">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+          </div>
+          <!-- Grid column -->
+
+
+        </div>
+        <!-- Grid row-->
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div id="cus" class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold"><img src="images/logo.png" alt="" style="width: 170px;"></h5>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" style="color: #fff;">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!" style="color: #fff;">Tubes</a>
+          </p>
+          <p>
+            <a href="#!" style="color: #fff;">Accessories</a>
+          </p>
+          <p>
+            <a href="#!" style="color: #fff;">Water Pumps</a>
+          </p>
+          <p>
+            <a href="#!" style="color: #fff;">Installation</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold" style="color: #fff;">Discover</h6>
+          <hr class="text-light bg-dark mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+          <p>
+            <a href="#!" style="color: #fff;">Portfolio</a>
+          </p>
+          <p>
+            <a href="#!" style="color: #fff;">Become an Agent</a>
+          </p>
+          <p>
+            <a href="#!" style="color: #fff;">Delivery Rates</a>
+          </p>
+          <p>
+            <a href="#!" style="color: #fff;">Help</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold" style="color: #fff;">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p style="color: #fff;">
+            <i class="fa fa-home" aria-hidden="true"></i> Accra, Taifa Burkina Faso Rd, Bankyease</p>
+          <p style="color: #fff;">
+            <i class="fa fa-envelope" aria-hidden="true"></i> kennakomea@famous-house.com</p>
+          <p style="color: #fff;">
+            <i class="fa fa-phone" aria-hidden="true"></i> <span style="color: #fff;">+ 233 59 418 1601 </span> </p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="https://famous-house.com/" style="color: #fff;"> Famous-house.com</a>
+      <br> Designed and developed by <a href="https://www.linkedin.com/in/kenneth-akomea-294b70b4/"
+        style="color: #fff;"> Kenn</a> <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+    </div>
+    <?php
+    endif;
+    ?>
+
+</body>
+
+
+<script>
+  $(window).scroll(function () {
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 150);
+  });
+</script>
+
+
+<script>
+  // Open the Modal
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  // Close the Modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+  
+
+</html>
